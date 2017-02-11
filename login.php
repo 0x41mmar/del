@@ -1,5 +1,8 @@
+<html>
+<body>
+<div align="center">
+<h2>Login with Twitter</h2>
 <?php
-echo "Started"
 session_start();
 require_once('twitteroauth/twitteroauth.php');
 include('config.php');
@@ -39,3 +42,6 @@ else // Not logged in
 	}
 }
 ?>
+</div>
+</body>
+</html>
