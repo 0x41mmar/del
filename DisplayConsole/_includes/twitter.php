@@ -24,8 +24,11 @@
 	
 	// Set API request URL and timeline variables if needed <https://dev.twitter.com/docs/api/1.1>
 	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-	$twitterUsername = "DeeTGee";
-	$tweetCount = 20;
+	$twitterUsername = "TwitterDev";
+	if (isset($_GET('username')) {
+		$twitterUsername = $_GET('username');
+	}
+	$tweetCount = 200;
 	
 	// Use private tokens for development if they exist; delete when no longer necessary
 	$tokens = '_utils/tokens.php';
