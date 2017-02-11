@@ -31,11 +31,11 @@
 	$tweetCount = 200;
 	
 	// Use private tokens for development if they exist; delete when no longer necessary
-	$tokens = '_utils/tokens.php';
+	$tokens = $_SERVER["DOCUMENT_ROOT"] . 'DisplayConsole/_utils/tokens.php';
 	is_file($tokens) AND include $tokens;
 	
 	// Require the OAuth class
-	require_once('_utils/twitter-api-oauth.php');
+	require_once($_SERVER["DOCUMENT_ROOT"] . 'DisplayConsole/_utils/twitter-api-oauth.php');
 	
 ###############################################################
 	## MAKE GET REQUEST

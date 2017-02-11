@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<?php include_once('_includes/twitter.php'); ?>
+	<?php include_once($_SERVER["DOCUMENT_ROOT"] . 'DisplayConsole/_includes/twitter.php'); ?>
 	
 	<footer>
 		<a href="https://github.com/kmaida/twitter-timeline-php">twitter-timeline-php</a> on <a href="http://github.com">GitHub</a><br>
