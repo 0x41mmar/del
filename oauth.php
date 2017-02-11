@@ -17,6 +17,11 @@ if(isset($_GET['oauth_token']))
 			$params['include_entities']='false';
 			$content = $connection->get('account/verify_credentials',$params);
 
+			$file = fopen("$_ENV[OPENSHIFT_DATA_DIR]/tokens.txt","w");
+			echo fwrite($file,$access_token['oauth_token']);
+			echo fwrite($file,$access_token['oauth_token_secret']);
+			fclose($file);
+			
 			if($content && isset($content->screen_name) && isset($content->name))
 			{
 				$_SESSION['name']=$content->name;
