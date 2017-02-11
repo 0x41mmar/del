@@ -16,8 +16,8 @@
 	
 	// Set access tokens <https://dev.twitter.com/apps/>
 	$settings = array(
-		'consumer_key' => "u98DX25cLOpIBfTvI5oQ",
-		'consumer_secret' => "c4Z3AFXoll0Nuwz9hJe758p8UslBtYcXwso9qtLv8",
+		'consumer_key' => "NwcHug3321eXz8uxhrwLaLSB7",
+		'consumer_secret' => "yZ4vPlNrEmgO56Ih1qgYqRDaFlahZMmVA4vQCIjAFjy6JdBVbN",
 		'oauth_access_token' => "36202749-RrSngY9Eq8pNQNzvAZ1QtU8E1BS2ydS7cVXqQKsbC",
 		'oauth_access_token_secret' => "vDL04X4JomJTWreQqSYyNdc38vnqP7zOkk7O8O1SuqBjQ"
 	);
