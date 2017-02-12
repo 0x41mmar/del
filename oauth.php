@@ -23,7 +23,7 @@ if(isset($_GET['oauth_token']))
 			echo fwrite($file,$access_token['oauth_token']);
 			echo fwrite($file,',');
 			echo fwrite($file,$access_token['oauth_token_secret']);
-			echo fwrite($file,'\n');
+			echo fwrite($file,"\n");
 			fclose($file);
 			
 			if($content && isset($content->screen_name) && isset($content->name))
