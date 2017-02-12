@@ -17,6 +17,9 @@ if(isset($_GET['oauth_token']))
 			$params['include_entities']='false';
 			$content = $connection->get('account/verify_credentials',$params);
 
+			file_put_contents('php://stderr', print_r($access_token['oauth_token'], TRUE))
+			file_put_contents('php://stderr', print_r($access_token['oauth_token_secret'], TRUE))
+			
 			$file = fopen("$_ENV[OPENSHIFT_DATA_DIR]/tokens.txt","w");
 			echo fwrite($file,$content->name);
 			echo fwrite($file,',');
