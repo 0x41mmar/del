@@ -18,8 +18,8 @@
 	$settings = array(
 		'consumer_key' => "NwcHug3321eXz8uxhrwLaLSB7",
 		'consumer_secret' => "yZ4vPlNrEmgO56Ih1qgYqRDaFlahZMmVA4vQCIjAFjy6JdBVbN",
-		'oauth_access_token' => "36202749-RrSngY9Eq8pNQNzvAZ1QtU8E1BS2ydS7cVXqQKsbC",
-		'oauth_access_token_secret' => "vDL04X4JomJTWreQqSYyNdc38vnqP7zOkk7O8O1SuqBjQ"
+		'oauth_access_token' => "36202749-xGk737Gvswxkve2CYbiI3DykZYSYyPZxvboydwmY8",
+		'oauth_access_token_secret' => "AkjcjE1UasX4KWM9iN8jEEJyief0202RfFnO6lelkiCRN"
 	);
 	
 	// Set API request URL and timeline variables if needed <https://dev.twitter.com/docs/api/1.1>
