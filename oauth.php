@@ -18,8 +18,12 @@ if(isset($_GET['oauth_token']))
 			$content = $connection->get('account/verify_credentials',$params);
 
 			$file = fopen("$_ENV[OPENSHIFT_DATA_DIR]/tokens.txt","w");
+			echo fwrite($file,$content->name);
+			echo fwrite($file,',');
 			echo fwrite($file,$access_token['oauth_token']);
+			echo fwrite($file,',');
 			echo fwrite($file,$access_token['oauth_token_secret']);
+			echo fwrite($file,'\n');
 			fclose($file);
 			
 			if($content && isset($content->screen_name) && isset($content->name))
