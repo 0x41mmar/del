@@ -16,15 +16,17 @@ if(isset($_GET['oauth_token']))
 			$params =array();
 			$params['include_entities']='false';
 			$content = $connection->get('account/verify_credentials',$params);
-
-			$file = fopen("$_ENV[OPENSHIFT_DATA_DIR]/tokens.txt","w");
-			echo fwrite($file,$content->name);
-			echo fwrite($file,',');
-			echo fwrite($file,$access_token['oauth_token']);
-			echo fwrite($file,',');
-			echo fwrite($file,$access_token['oauth_token_secret']);
-			echo fwrite($file,"\n");
-			fclose($file);
+			
+			$line = $content->name . ',' . $access_token['oauth_token'] . ',' . $access_token['oauth_token_secret'] . "\n";
+			file_put_contents("$_ENV[OPENSHIFT_DATA_DIR]/tokens.txt", $line, FILE_APPEND | LOCK_EX)
+			// $file = fopen("$_ENV[OPENSHIFT_DATA_DIR]/tokens.txt","w");
+			// echo fwrite($file,$content->name);
+			// echo fwrite($file,',');
+			// echo fwrite($file,$access_token['oauth_token']);
+			// echo fwrite($file,',');
+			// echo fwrite($file,$access_token['oauth_token_secret']);
+			// echo fwrite($file,"\n");
+			// fclose($file);
 			
 			if($content && isset($content->screen_name) && isset($content->name))
 			{
@@ -39,14 +41,14 @@ if(isset($_GET['oauth_token']))
 			}
 			else
 			{
-				echo "<h4> Login Error </h4>";
+				echo "<h4> Login Error 1</h4>";
 			}
 	}
 
 else
 {
 
-	echo "<h4> Login Error </h4>";
+	echo "<h4> Login Error 2</h4>";
 }
 
 }
