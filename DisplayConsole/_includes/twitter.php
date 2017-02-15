@@ -171,7 +171,7 @@
 					echo '<p>' . $formattedTweet . '</p>'; 
 					if ($hasMedia) {
 						foreach ($tweet['entities']['media'] as $image) {
-							echo '<p><a href="' . $image['media_url'] . ':large">' . '<img src="' . $image['media_url'] . ':thumb" /></p>';
+							echo '<p><a href="' . $image['media_url'] . ':large" target="_blank">' . '<img src="' . $image['media_url'] . ':thumb" /></p>';
 						}
 					}
 					echo '<p class="tweet-details">';
