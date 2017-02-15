@@ -118,6 +118,7 @@
 	
 		$retweet = $tweet['retweeted_status'];
 		$isRetweet = !empty($retweet);
+		$hasMedia = !empty($tweet['entities']['media']);
 		
 		# Retweet - get the retweeter's name and screen name
 		$retweetingUser = $isRetweet ? $tweet['user']['name'] : null;
@@ -168,7 +169,11 @@
 			<blockquote class="tweet-text">
 				<?php 	
 					echo '<p>' . $formattedTweet . '</p>'; 
-				 
+					if ($hasMedia) {
+						foreach ($tweet['entities']['media'] as $image) {
+							echo '<p><a href="' . $image['media_url'] . ':large">' . '<img src="' . $image['media_url'] . ':thumb" /></p>';
+						}
+					}
 					echo '<p class="tweet-details">';
 					
 					if ($isReply) {
