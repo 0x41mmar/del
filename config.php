@@ -1,7 +1,7 @@
 <?php
 
-$CONSUMER_KEY='NwcHug3321eXz8uxhrwLaLSB7';
-$CONSUMER_SECRET='yZ4vPlNrEmgO56Ih1qgYqRDaFlahZMmVA4vQCIjAFjy6JdBVbN';
+$CONSUMER_KEY='XAlkmRXHbTe0YTKhtTaW1gTfR';
+$CONSUMER_SECRET='izyxA4ZNmGf3WbtTsizOnbxhzgC7GGvdFPZZZ2EAm3tibsOXRr';
 $OAUTH_CALLBACK='http://delegate-seiryuu.rhcloud.com/oauth.php';
 
 ?>
