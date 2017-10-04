@@ -37,7 +37,7 @@
 ###############################################################
 	## MAKE GET REQUEST
 	
-	$getfield = '?screen_name=' . $twitterUsername . '&count=' . $tweetCount;
+	$getfield = '?screen_name=' . $twitterUsername . '&count=' . $tweetCount . '&tweet_mode=extended';
 	$twitter = new TwitterAPITimeline($settings);
 	
 	$json = $twitter->setGetfield($getfield)	// Note: Set the GET field BEFORE calling buildOauth()
@@ -133,7 +133,7 @@
 		
 		# The tweet
 		$id = $tweet['id'];
-		$formattedTweet = !$isRetweet ? formatTweet($tweet['text']) : formatTweet($retweet['text']);
+		$formattedTweet = !$isRetweet ? formatTweet($tweet['full_text']) : formatTweet($retweet['full_text']);
 		$statusURL = 'http://twitter.com/' . $userScreenName . '/status/' . $id;
 		$date = timeAgo($tweet['created_at']);
 		
