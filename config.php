@@ -1,7 +1,7 @@
 <?php
 
-$CONSUMER_KEY='XAlkmRXHbTe0YTKhtTaW1gTfR';
-$CONSUMER_SECRET='izyxA4ZNmGf3WbtTsizOnbxhzgC7GGvdFPZZZ2EAm3tibsOXRr';
-$OAUTH_CALLBACK='http://delegate-seiryuu.rhcloud.com/oauth.php';
+$CONSUMER_KEY=getenv('consumer_key');
+$CONSUMER_SECRET=getenv('consumer_secret');
+$OAUTH_CALLBACK='http://delegate-delegate.193b.starter-ca-central-1.openshiftapps.com/oauth.php';
 
 ?>
