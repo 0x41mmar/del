@@ -49,7 +49,6 @@
 ############################################################### 	
 	## DO SOMETHING WITH THE DATA
 	
-	
 //-------------------------------------------------------------- Timeline HTML output
 	# This output markup adheres to the Twitter developer display requirements (https://dev.twitter.com/terms/display-requirements)
 	
